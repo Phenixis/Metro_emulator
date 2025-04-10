@@ -1,23 +1,37 @@
 #!/bin/bash
 
-export LD_LIBRARY_PATH=/usr/local/lib:$LD_LIBRARY_PATH
-source .venv/bin/activate
+# Function to kill all background processes when the script exits
+cleanup() {
+    sudo kill $(jobs -p)
+}
 
-sudo -E .venv/bin/python metroEmuUI/MetroEmuRun.py &
+# Trap SIGINT (Ctrl+C) and SIGTERM to trigger cleanup
+trap cleanup SIGINT SIGTERM
+
+# Check if the virtual environment is activated
+if [[ "$VIRTUAL_ENV" != "$(pwd)/.venv" ]]; then
+    echo "Activating virtual environment..."
+    source .venv/bin/activate
+fi
+
+# Start the processes in the background
+sudo .venv/bin/python metroEmuUI/MetroEmuRun.py &
 sleep 5
 
-sudo -E .venv/bin/python plcCtrl/signalPlcEmu/plcSimulatorSignal.py &
+sudo .venv/bin/python plcCtrl/signalPlcEmu/plcSimulatorSignal.py &
 sleep 5
 
-sudo -E .venv/bin/python plcCtrl/stationPlcEmu/plcSimulatorStation.py &
+sudo .venv/bin/python plcCtrl/stationPlcEmu/plcSimulatorStation.py &
 sleep 5
 
-sudo -E .venv/bin/python plcCtrl/trainPlcEmu/plcSimulatorTrain.py &
+sudo .venv/bin/python plcCtrl/trainPlcEmu/plcSimulatorTrain.py &
 sleep 5
 
-sudo -E .venv/bin/python scadaEmuUI/hmiEmuRun.py &
+sudo .venv/bin/python scadaEmuUI/hmiEmuRun.py &
 sleep 5
 
-sudo -E .venv/bin/python trainCtrlUI/trainCtrlRun.py &
+sudo .venv/bin/python trainCtrlUI/trainCtrlRun.py &
 
+# Wait for all background jobs
 wait
+
