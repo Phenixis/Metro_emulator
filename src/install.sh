@@ -33,7 +33,7 @@ log "Downloading wxPython wheel in the background..."
 if $VERBOSE; then
     curl -L "$WXPYTHON_URL" -o "$WXPYTHON_WHL"
 else
-    curl -L "$WXPYTHON_URL" -o "$WXPYTHON_WHL" > /dev/null
+    curl -L "$WXPYTHON_URL" -o "$WXPYTHON_WHL" > /dev/null 2>&1
 fi &
 CURL_PID=$!
 
