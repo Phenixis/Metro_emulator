@@ -135,7 +135,6 @@ class s7CommClient(object):
             self.client.connect(self._rtuIp, 0, 0, self._rtuPort)
             self.connected = self.client.get_connected()
         except Exception as err:
-            print(self._rtuIp, self._rtuPort)
             print("s7CommClient init Error: %s" % err)
             return None
 
@@ -311,7 +310,6 @@ class s7commServer(object):
         print("Start the S7comm event handling loop.")
         try:
             self.initRegisterArea()
-            print(self._hostPort)
             self._server.start(self._hostPort)
             self.runingFlg = True
         except Exception as err:
