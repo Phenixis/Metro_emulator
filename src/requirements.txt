@@ -1,3 +1,4 @@
 influxdb==5.3.0
 pyModbusTCP==0.2.0
+python-snap7 
 # wxPython==4.1.0

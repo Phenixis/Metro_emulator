@@ -16,7 +16,7 @@ run_cmd() {
     if $VERBOSE; then
         eval "$1"
     else
-        eval "$1" > /dev/null 2>&1
+        eval "$1" > /dev/null
     fi
 }
 
@@ -33,7 +33,7 @@ log "Downloading wxPython wheel in the background..."
 if $VERBOSE; then
     curl -L "$WXPYTHON_URL" -o "$WXPYTHON_WHL"
 else
-    curl -L "$WXPYTHON_URL" -o "$WXPYTHON_WHL" > /dev/null 2>&1
+    curl -L "$WXPYTHON_URL" -o "$WXPYTHON_WHL" > /dev/null
 fi &
 CURL_PID=$!
 
