@@ -3,6 +3,7 @@
 # Function to kill all background processes when the script exits
 cleanup() {
     sudo kill $(jobs -p)
+    sudo kill -9 $$
 }
 
 # Trap SIGINT (Ctrl+C) and SIGTERM to trigger cleanup
