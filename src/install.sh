@@ -62,7 +62,7 @@ source .venv/bin/activate
 log "Installing requirements.txt packages..."
 run_cmd "pip install -r requirements.txt"
 
-log "Waiting for wxPython wheel to finish downloading..."
+log "Waiting for wxPython wheel to finish downloading. It can take a few minutes..."
 wait $CURL_PID
 
 log "Installing wxPython wheel..."
