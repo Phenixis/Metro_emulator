@@ -1,6 +1,6 @@
 [
     {
-        "id": "Cardiff_Bay",
+        "id": "Coryton",
         "pos": [
             320,
             700
@@ -9,7 +9,7 @@
         "signalLayout": 3
     },
     {
-        "id": "Grangetown",
+        "id": "Whitchurch",
         "pos": [
             200,
             300
@@ -22,7 +22,7 @@
         ]
     },
     {
-        "id": "Roath_Park",
+        "id": "Rhiwbina",
         "pos": [
             930,
             200
@@ -31,7 +31,7 @@
         "signalLayout": 2
     },
     {
-        "id": "Queen_Street",
+        "id": "Birchgrove",
         "pos": [
             1400,
             600
@@ -44,7 +44,7 @@
         ]
     },
     {
-        "id": "Ninian_Park",
+        "id": "Ty_Glas",
         "pos": [
             1160,
             700

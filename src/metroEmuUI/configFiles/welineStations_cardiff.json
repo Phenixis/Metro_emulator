@@ -1,6 +1,6 @@
 [
     {
-        "id": "Treherbert",
+        "id": "Pontypridd",
         "pos": [
             80,
             200
@@ -9,7 +9,7 @@
         "signalLayout": 2
     },
     {
-        "id": "Pontypridd",
+        "id": "Radyr",
         "pos": [
             360,
             600
@@ -18,7 +18,7 @@
         "signalLayout": 2
     },
     {
-        "id": "Radyr",
+        "id": "Ninian_Park",
         "pos": [
             750,
             800
@@ -40,7 +40,7 @@
         ]
     },
     {
-        "id": "Queen_Street",
+        "id": "Pye Corner",
         "pos": [
             1250,
             400
@@ -49,7 +49,7 @@
         "signalLayout": 2
     },
     {
-        "id": "Cardiff_Bay",
+        "id": "Rogerstone",
         "pos": [
             1550,
             430
@@ -62,7 +62,7 @@
         ]
     },
     {
-        "id": "Grangetown",
+        "id": "Crosskeys",
         "pos": [
             1100,
             450
@@ -71,7 +71,7 @@
         "signalLayout": 3
     },
     {
-        "id": "Ninian_Park",
+        "id": "Newbridge",
         "pos": [
             850,
             850
@@ -80,7 +80,7 @@
         "signalLayout": 3
     },
     {
-        "id": "Llandaf",
+        "id": "Llanhileth",
         "pos": [
             430,
             650
@@ -89,7 +89,7 @@
         "signalLayout": 3
     },
     {
-        "id": "Coryton",
+        "id": "Ebbw Vale Parkway",
         "pos": [
             50,
             450
