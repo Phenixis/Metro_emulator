@@ -1,0 +1,50 @@
+[
+    {
+        "id": "Pontypridd",
+        "pos": [
+            360,
+            450
+        ],
+        "signalLayout": 3
+    },
+    {
+        "id": "Caerphilly",
+        "pos": [
+            430,
+            50
+        ],
+        "signalLayout": 2
+    },
+    {
+        "id": "Lisvane_Thornhill",
+        "pos": [
+            1040,
+            50
+        ],
+        "signalLayout": 2
+    },
+    {
+        "id": "Heath_High_Level",
+        "pos": [
+            980,
+            300
+        ],
+        "signalLayout": 3
+    },
+    {
+        "id": "Queen_Street",
+        "pos": [
+            750,
+            600
+        ],
+        "signalLayout": 3
+    },
+    {
+        "id": "Llanishen",
+        "pos": [
+            550,
+            100
+        ],
+        "signalLayout": 3
+    }
+]

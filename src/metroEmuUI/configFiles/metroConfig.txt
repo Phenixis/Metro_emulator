@@ -39,7 +39,7 @@ PLC_TIMEOUT: 3
 TR_CFG_FOLDER:TrainLocation
 
 # Station config json file
-WE_STATION_CFG:welineStations.json
-NC_STATION_CFG:nslineStations.json
-CC_STATION_CFG:cclineStations.json
-MT_STATION_CFG:mtlineStations.json
+WE_STATION_CFG:welineStations_cardiff.json
+NC_STATION_CFG:nslineStations_cardiff.json
+CC_STATION_CFG:cclineStations_cardiff.json
+MT_STATION_CFG:mtlineStations_cardiff.json
