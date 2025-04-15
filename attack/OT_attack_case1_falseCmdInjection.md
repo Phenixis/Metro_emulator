@@ -236,7 +236,7 @@ As shown below one PLC clock cycle :
 
 Given that the red team attackers operate outside the railway cyber range network, they rely on the attack control Command and Control (C2) system to execute the assault. As detailed in the Attack Pre-condition Introduction section, the false data injection program has been previously deployed on one of the maintenance computers within the cyber range. Consequently, when the red team attacker accesses the C2 system, they will see the false data/cmd injection program has been registered in the C2 as shown below : 
 
-![](img/C2Img/Register.png)
+![](img/C2Img/register.png)
 
 Before start to inject the data / command, the red team attacker needs to read the PLC data first. To assign a PLC read task to the injector, select link to task detail => Assign a special task via Json (in the malware tasks control page).
 
@@ -254,7 +254,7 @@ Read PLC holding register state :
 
 Press the `submit` button, when the false data injector reports the task finished, check the result by click the `Show task result` button (As shown below the red team attacker can read the holding register data from HR0 to HR3) : 
 
-![](img/c2Img/readRegRst.png)
+![](img/C2Img/readRegRst.png)
 
 After several tries, the attacker can identify which holding registers are used in the PLC.
 

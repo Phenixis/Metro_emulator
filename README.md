@@ -237,7 +237,7 @@ Currently we use our mini cyber range provide one IT cyber attack case study and
 
 ![](doc/img/attackRoadMap.png)
 
-Detailed case study document [> link](https://github.com/LiuYuancheng/Cross-Sword-2023-Nato-Event/blob/main/attackDemos/falseDataInjection/instructorManual_FDJ.md)
+Detailed case study document [> link](attack/falseDataInjection/instructorManual_FDJ.md)
 
 #### OT system cyber attack case study
 
