@@ -42,4 +42,4 @@ TR_CFG_FOLDER:TrainLocation
 WE_STATION_CFG:welineStations_cardiff.json
 NC_STATION_CFG:nslineStations_cardiff.json
 CC_STATION_CFG:cclineStations_cardiff.json
-MT_STATION_CFG:mtlineStations_cardiff.json
+MT_STATION_CFG:mtlineStations.json
