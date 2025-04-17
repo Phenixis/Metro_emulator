@@ -95,15 +95,10 @@ class udpClient(object):
         self.client.sendto(msg, self.ipAddr)
         if resp:
             try:
-                print("1", self.ipAddr)
                 data, _ = self.client.recvfrom(self.bufferSize)
-                print("2")
                 if b'BM;Send' in data:
-                    print("2.1")
                     _, _, messageSZ = data.decode(CODE_FMT).split(';')
-                    print("2.2")
                     data = self.receiveChunk(int(messageSZ))
-                print("3")
                 return data
             except Exception as error:
                 print("udpClient;sendMsg(): Can not connect to the server!")
