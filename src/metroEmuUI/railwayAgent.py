@@ -507,8 +507,8 @@ class AgentTrain(AgentTarget):
         if self.isWaiting: return False
         ftTail = frontTrain.getTrainPos(idx=-1) # front train tail position.
         if self.checkNear(ftTail[0], ftTail[1], threshold):
-            if self.trainSpeed >= 0 and self.dockCount==0:
-                self.trainSpeed = 0
+            # if self.trainSpeed >= 0 and self.dockCount==0:
+            #     self.trainSpeed = 0
             self.rfrtSensorFlg = True
             return True # detected will be collision to the front train
         elif self.trainSpeed == 0 and self.dockCount <= 1:

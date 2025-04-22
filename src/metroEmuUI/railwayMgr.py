@@ -499,8 +499,11 @@ class MapMgr(object):
                     frontTrain = val[(i+1)%len(val)] 
                     # Check the collision to the front train 1st. 
                     result = train.checkCollFt(frontTrain)
+                    print("Train %s collition with %s: %s" % (train.getID(), frontTrain.getID(), result))
+                    print("Auto avoidance: %s" % gv.gCollAvoid)
                     # Handle the collision if the auto avoidance is disabled.
                     if result and (not gv.gCollAvoid):
+                        print("Collision happened, stop the train %s" % train.getID())
                         train.setEmgStop(True)
                         train.setCollsionFlg(True)
                         frontTrain.setEmgStop(True)
