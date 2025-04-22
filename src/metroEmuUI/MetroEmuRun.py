@@ -152,7 +152,7 @@ class UIFrame(wx.Frame):
         btnSample = wx.StaticBitmap(self, -1, png, (10, 5), (png.GetWidth(), png.GetHeight()))
         vbox0.Add(btnSample, flag=flagsL, border=2)
         self.collisionCB = wx.CheckBox(self, label = 'Auto collision avoidance')
-        self.collisionCB.SetValue(gv.gCollAvoid)
+        self.collisionCB.SetValue(True) # (gv.gCollAvoid)
         self.collisionCB.Bind(wx.EVT_CHECKBOX, self.onCollisionSet)
         vbox0.Add(self.collisionCB, flag=flagsL, border=2)
         

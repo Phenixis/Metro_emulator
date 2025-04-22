@@ -22,7 +22,7 @@ UI_INTERVAL:2
 
 # Init Control paramters
 # Trains collision avoidence flag.
-COLL_AVOID:True
+COLL_AVOID:False
 
 # Trains Junction auto correct flag.(Check junction state and auto correct wrong PLC signal)
 JUNC_AVOID:True
