@@ -265,6 +265,7 @@ class DataManager(threading.Thread):
     def setTrainsPower(self, reqJsonStr):
         respStr = json.dumps({'result': 'failed'})
         try:
+            print("setTrainsPower: %s" %str(reqJsonStr))
             reqDict = json.loads(reqJsonStr)
             if gv.iMapMgr:
                 for key, val in reqDict.items():

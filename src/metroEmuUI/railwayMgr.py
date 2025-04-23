@@ -501,6 +501,7 @@ class MapMgr(object):
                     result = train.checkCollFt(frontTrain)
                     # Handle the collision if the auto avoidance is disabled.
                     if result and (not gv.gCollAvoid):
+                        train.setFsensorVal(True)
                         train.setEmgStop(True)
                         train.setCollsionFlg(True)
                         frontTrain.setEmgStop(True)

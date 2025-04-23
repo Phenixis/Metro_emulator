@@ -134,6 +134,14 @@ class MapManager(object):
             for idx in range(idxRange):
                 train = self.trainsAgentDict[trackID][idx]
                 train.setThrottle(speedList[idx])
+                
+#-----------------------------------------------------------------------------
+    def updateTrainsFsensor(self, trackID, fsensorList):
+        if trackID in self.trainsAgentDict.keys():
+            idxRange = min(len(fsensorList), len(self.trainsAgentDict[trackID]))
+            for idx in range(idxRange):
+                train = self.trainsAgentDict[trackID][idx]
+                train.setFsensorVal(fsensorList[idx])
 
 #-----------------------------------------------------------------------------
     def updateTrainsPwr(self, trackID, speedList):
@@ -264,6 +272,20 @@ class DataManager(object):
             if val is None: continue
             result += val
         return result
+
+    #-----------------------------------------------------------------------------
+    def setPlcHRegsData(self, plcid, idx, val):
+        """ Set the PLC holding registers state
+            Args:
+                plcid (str): PLC ID
+                idx (int): holding registers address index.
+                val (int): holding registers value.
+        """
+        if plcid in self.plcClients.keys():
+            gv.gDebugPrint('DataManager: set PLC holding register:%s' %str((plcid, idx, val)), 
+                           logType=gv.LOG_INFO)
+            self.plcClients[plcid].setHoldingRegs(idx, val)
+            time.sleep(0.1)
     
     #-----------------------------------------------------------------------------
     def getAllPlcCoisData(self):
