@@ -389,8 +389,11 @@ class UIFrame(wx.Frame):
             map manager.
         """
         regdataList = gv.idataMgr.getAllPlcRegsData()
+        print("Register data list: %s" %str(regdataList))
         coildataList = gv.idataMgr.getAllPlcCoisData()
+        print("Coil data list: %s" %str(coildataList))
         rtuDataDict = gv.idataMgr.getAllRtuDataDict()
+        print("RTU data dict: %s" %str(rtuDataDict))
         for key in gv.gTrackConfig.keys():
             rsIdx, reIdx = gv.gTrackConfig[key]['trainHregIdx']
             gv.iMapMgr.updateTrainsThrottle(key, regdataList[rsIdx:reIdx])
