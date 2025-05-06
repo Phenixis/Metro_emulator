@@ -42,7 +42,7 @@ sudo .venv/bin/python scadaEmuUI/hmiEmuRun.py > /dev/null &
 sleep 1
 
 echo "Opening the Train Controller Simulator..."
-sudo .venv/bin/python trainCtrlUI/trainCtrlRun.py > /dev/null &
+sudo .venv/bin/python trainCtrlUI/trainCtrlRun.py &
 
 # Wait for all background jobs
 echo "All the programs are running, hit 'Ctrl+C' to close them."
