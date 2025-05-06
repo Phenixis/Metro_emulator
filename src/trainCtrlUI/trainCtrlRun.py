@@ -388,13 +388,15 @@ class UIFrame(wx.Frame):
         """ Convert the PLC information to trains information and update the 
             map manager.
         """
+        print("Update Trains Info")
         regdataList = gv.idataMgr.getAllPlcRegsData()
-        print("Register data list: %s" %str(regdataList))
+        # print("Register data list: %s" %str(regdataList))
         coildataList = gv.idataMgr.getAllPlcCoisData()
-        print("Coil data list: %s" %str(coildataList))
+        # print("Coil data list: %s" %str(coildataList))
         rtuDataDict = gv.idataMgr.getAllRtuDataDict()
-        print("RTU data dict: %s" %str(rtuDataDict))
+        # print("RTU data dict: %s" %str(rtuDataDict))
         for key in gv.gTrackConfig.keys():
+            # print("Update the trains info for %s" %key)
             rsIdx, reIdx = gv.gTrackConfig[key]['trainHregIdx']
             gv.iMapMgr.updateTrainsThrottle(key, regdataList[rsIdx:reIdx])
             csIdx, ceIdx = gv.gTrackConfig[key]['trainCoilIdx']

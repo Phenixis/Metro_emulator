@@ -444,8 +444,8 @@ class MapMgr(object):
                     train.setEmgStop(stopflg)
         # change the trains avoidance config if need
         if trackID == 'config':
-            gv.gDebugPrint('--> change the CA state: %s' %str(powerStateList[0]), 
-                           logType=gv.LOG_INFO)
+            # gv.gDebugPrint('--> change the CA state: %s' %str(powerStateList[0]), 
+                        #    logType=gv.LOG_INFO)
             data = powerStateList[0]
             gv.gCollAvoid = data
             gv.iMainFrame.changeCAcheckboxState(gv.gCollAvoid)
@@ -512,7 +512,7 @@ class MapMgr(object):
                 if collsionTrainsDict and i in collsionTrainsDict[key]:
                     if not gv.gJuncAvoid: train.setEmgStop(True)
                 train.updateRealWordInfo()
-                train.updateTrainPos()               
+                train.updateTrainPos()        
             # update all the track's sensors state afte all the trains have moved.
             self.sensors[key].updateActive(val)
             # updaste all the signal, if test mode (not connect to PLC) call the 
