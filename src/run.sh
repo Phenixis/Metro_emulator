@@ -18,7 +18,7 @@ fi
 sudo echo "You can find all the logs of the programs in the 'Logs' folder."
 
 echo "Opening the Metro Simulation..."
-sudo .venv/bin/python metroEmuUI/MetroEmuRun.py > /dev/null &
+sudo .venv/bin/python metroEmuUI/MetroEmuRun.py &
 sleep 1
 
 echo "Opening the junctions PLC Controller..."
