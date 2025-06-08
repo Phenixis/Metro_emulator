@@ -1,0 +1,50 @@
+[
+    {
+        "id": "Radyr",
+        "pos": [
+            360,
+            450
+        ],
+        "signalLayout": 3
+    },
+    {
+        "id": "Barry",
+        "pos": [
+            430,
+            50
+        ],
+        "signalLayout": 2
+    },
+    {
+        "id": "Eastbrook",
+        "pos": [
+            1040,
+            50
+        ],
+        "signalLayout": 2
+    },
+    {
+        "id": "Grangetown",
+        "pos": [
+            980,
+            300
+        ],
+        "signalLayout": 3
+    },
+    {
+        "id": "Cardiff_Central",
+        "pos": [
+            750,
+            600
+        ],
+        "signalLayout": 3
+    },
+    {
+        "id": "Llandaf",
+        "pos": [
+            550,
+            100
+        ],
+        "signalLayout": 3
+    }
+]

@@ -41,6 +41,7 @@
 import time
 import ctypes
 import snap7
+from snap7 import type as snap7_types
 from snap7.common import load_library
 
 BOOL_TYPE = 0   # bool type 2 bytes data.
@@ -270,7 +271,7 @@ class s7commServer(object):
         """ Register the new added address index and the data base to the snap7 area DB."""
         for addressIdxStr in self._dbDict.keys():
             addressIdx = int(addressIdxStr)
-            self._server.register_area(snap7.types.srvAreaDB, 
+            self._server.register_area(snap7_types.SrvArea(5), 
                                        addressIdx, 
                                        self._dbDict[addressIdxStr]['dbData'])
 

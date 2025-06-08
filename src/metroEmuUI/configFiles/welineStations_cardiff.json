@@ -1,0 +1,104 @@
+[
+    {
+        "id": "Pontypridd",
+        "pos": [
+            80,
+            200
+        ],
+        "layout": 5,
+        "signalLayout": 2
+    },
+    {
+        "id": "Radyr",
+        "pos": [
+            360,
+            600
+        ],
+        "layout": 5,
+        "signalLayout": 2
+    },
+    {
+        "id": "Ninian_Park",
+        "pos": [
+            750,
+            800
+        ],
+        "layout": 5,
+        "signalLayout": 2
+    },
+    {
+        "id": "Cardiff_Central",
+        "pos": [
+            900,
+            500
+        ],
+        "layout": 6,
+        "signalLayout": 1,
+        "labelPos": [
+            -70,
+            -10
+        ]
+    },
+    {
+        "id": "Pye_Corner",
+        "pos": [
+            1250,
+            400
+        ],
+        "layout": 5,
+        "signalLayout": 2
+    },
+    {
+        "id": "Bristol",
+        "pos": [
+            1550,
+            430
+        ],
+        "layout": 6,
+        "signalLayout": 0,
+        "labelPos": [
+            -70,
+            -60
+        ]
+    },
+    {
+        "id": "Crosskeys",
+        "pos": [
+            1100,
+            450
+        ],
+        "layout": 5,
+        "signalLayout": 3
+    },
+    {
+        "id": "Newbridge",
+        "pos": [
+            850,
+            850
+        ],
+        "layout": 5,
+        "signalLayout": 3
+    },
+    {
+        "id": "Llanhileth",
+        "pos": [
+            430,
+            650
+        ],
+        "layout": 5,
+        "signalLayout": 3
+    },
+    {
+        "id": "Ebbw_Vale_Parkway",
+        "pos": [
+            50,
+            450
+        ],
+        "layout": 6,
+        "signalLayout": 1,
+        "labelPos": [
+            20,
+            -10
+        ]
+    }
+]

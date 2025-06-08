@@ -228,16 +228,16 @@ class MapMgr(object):
         # weline (top)
         y = 100
         key = 'weline'
-        trackStation_we = [{'id': 'Tuas_Link', 'pos': (80+100*0+60, y), 'layout': gv.LAY_D},
-                    {'id': 'Jurong_East', 'pos': (80+100*2+60, y), 'layout': gv.LAY_U},
-                    {'id': 'Outram_Park', 'pos': (80+100*4+60, y), 'layout': gv.LAY_U},
-                    {'id': 'City_Hall', 'pos': (80+100*6+30, y), 'layout': gv.LAY_U, },
-                    {'id': 'Paya_Lebar', 'pos': (80+100*6+60, y), 'layout': gv.LAY_D },
-                    {'id': 'Changi_Airport', 'pos': (80+100*8+60, y), 'layout': gv.LAY_U, },
-                    {'id': 'Lavender', 'pos': (80+100*10+60, y), 'layout': gv.LAY_U},
-                    {'id': 'Raffles_Place', 'pos': (80+100*12+60, y), 'layout': gv.LAY_U},
-                    {'id': 'Clementi', 'pos': (80+100*14+60, y), 'layout': gv.LAY_U},
-                    {'id': 'Boon_Lay', 'pos': (80+100*15+60, y), 'layout': gv.LAY_D}]
+        trackStation_we = [{'id': 'Pontypridd', 'pos': (80+100*0+60, y), 'layout': gv.LAY_D},
+                    {'id': 'Radyr', 'pos': (80+100*2+60, y), 'layout': gv.LAY_U},
+                    {'id': 'Ninian_Park', 'pos': (80+100*4+60, y), 'layout': gv.LAY_U},
+                    {'id': 'Cardiff_Central', 'pos': (80+100*6+30, y), 'layout': gv.LAY_U, },
+                    {'id': 'Pye_Corner', 'pos': (80+100*6+60, y), 'layout': gv.LAY_D },
+                    {'id': 'Bristol', 'pos': (80+100*8+60, y), 'layout': gv.LAY_U, },
+                    {'id': 'Crosskeys', 'pos': (80+100*10+60, y), 'layout': gv.LAY_U},
+                    {'id': 'Newbridge', 'pos': (80+100*12+60, y), 'layout': gv.LAY_U},
+                    {'id': 'Llanhileth', 'pos': (80+100*14+60, y), 'layout': gv.LAY_U},
+                    {'id': 'Ebbw_Vale_Parkway', 'pos': (80+100*15+60, y), 'layout': gv.LAY_D}]
         self.stations[key] = []
         for stationInfo in trackStation_we:
             station = AgentStation(self, stationInfo['id'], stationInfo['pos'], labelLayout=stationInfo['layout'])
@@ -246,12 +246,12 @@ class MapMgr(object):
         y += 160
         key = 'ccline'
         trackStation_cc = [
-                    {'id': 'Buona_Vista', 'pos': (80+120*11+40, y), 'layout': gv.LAY_D},
-                    {'id': 'Farrer_Road', 'pos': (80+120*12+80, y), 'layout': gv.LAY_D},
-                    {'id': 'Serangoon', 'pos': (80+120*3+80, y), 'layout': gv.LAY_U},
-                    {'id': 'Nicoll_Highway', 'pos': (80+120*7+40, y), 'layout': gv.LAY_U},
-                    {'id': 'Bayfront', 'pos': (80+120*7+80, y),'layout': gv.LAY_D},
-                    {'id': 'Harbourfront', 'pos': (80+120*9+80, y),'layout': gv.LAY_D}]
+                    {'id': 'Coryton', 'pos': (80+120*11+40, y), 'layout': gv.LAY_D},
+                    {'id': 'Whitchurch', 'pos': (80+120*12+80, y), 'layout': gv.LAY_D},
+                    {'id': 'Rhiwbina', 'pos': (80+120*3+80, y), 'layout': gv.LAY_U},
+                    {'id': 'Birchgrove', 'pos': (80+120*7+40, y), 'layout': gv.LAY_U},
+                    {'id': 'Ty_Glas', 'pos': (80+120*7+80, y),'layout': gv.LAY_D},
+                    {'id': 'Heath_Low_Level', 'pos': (80+120*9+80, y),'layout': gv.LAY_D}]
         self.stations[key] = []
         for stationInfo in trackStation_cc:
             station = AgentStation(self, stationInfo['id'], stationInfo['pos'], labelLayout=stationInfo['layout'])
@@ -259,12 +259,12 @@ class MapMgr(object):
         # nsline (btm)
         y += 160
         key = 'nsline'
-        trackStation_ns = [{'id': 'Jurong_East', 'pos': (80+210*6+140, y), 'layout': gv.LAY_D},
-                           {'id': 'Woodlands', 'pos': (80+210*1+70, y), 'layout': gv.LAY_U},
-                           {'id': 'Yishun', 'pos': (80+210*1+140, y), 'layout': gv.LAY_D},
-                           {'id': 'Orchard', 'pos': (80+210*3+70, y), 'layout': gv.LAY_U},
-                           {'id': 'City_Hall', 'pos': (80+210*3+140, y), 'layout': gv.LAY_D},
-                           {'id': 'Bishan', 'pos': (80+210*5+140, y), 'layout': gv.LAY_D}]
+        trackStation_ns = [{'id': 'Radyr', 'pos': (80+210*6+140, y), 'layout': gv.LAY_D},
+                           {'id': 'Barry', 'pos': (80+210*1+70, y), 'layout': gv.LAY_U},
+                           {'id': 'Eastbrook', 'pos': (80+210*1+140, y), 'layout': gv.LAY_D},
+                           {'id': 'Grangetown', 'pos': (80+210*3+70, y), 'layout': gv.LAY_U},
+                           {'id': 'Cardiff_Central', 'pos': (80+210*3+140, y), 'layout': gv.LAY_D},
+                           {'id': 'Llandaf', 'pos': (80+210*5+140, y), 'layout': gv.LAY_D}]
         self.stations[key] = []
         for stationInfo in trackStation_ns:
             station = AgentStation(self, stationInfo['id'], stationInfo['pos'], labelLayout=stationInfo['layout'])

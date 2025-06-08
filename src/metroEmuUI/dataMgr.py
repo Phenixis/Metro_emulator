@@ -183,7 +183,7 @@ class DataManager(threading.Thread):
             Returns:
                 bytes: message bytes needs to reply to the PLC.
         """
-        gv.gDebugPrint("Incomming message: %s" % str(msg), logType=gv.LOG_INFO)
+        # gv.gDebugPrint("Incomming message: %s" % str(msg), logType=gv.LOG_INFO)
         if msg == b'': return None
         # request message format: 
         # data fetch: GET:<key>:<val1>:<val2>...

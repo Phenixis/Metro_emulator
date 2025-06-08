@@ -97,7 +97,7 @@ class udpClient(object):
             try:
                 data, _ = self.client.recvfrom(self.bufferSize)
                 if b'BM;Send' in data:
-                    _, _, messageSZ = data.decode(CODE_FMT).split(';') 
+                    _, _, messageSZ = data.decode(CODE_FMT).split(';')
                     data = self.receiveChunk(int(messageSZ))
                 return data
             except Exception as error:
@@ -205,7 +205,6 @@ class udpServer(object):
                 _, _, size = bmMsg.split(';')
                 data = self.receiveChunk(int(size))
                 subData, _ = self.server.recvfrom(self.bufferSize)
-            print("Accepted connection from %s" % str(address))
             msg = handler(data) if not handler is None else data
             if not msg is None:  # don't response client if the handler feed back is None
                 if not isinstance(msg, bytes): msg = str(msg).encode(CODE_FMT)
@@ -256,7 +255,7 @@ def msgHandler(msg):
     """ The test handler method passed into the UDP server to handle the 
         incoming messages.
     """
-    print("Incomming message: %s" % str(msg))
+    # print("Incomming message: %s" % str(msg))
     return msg
 
 def main():

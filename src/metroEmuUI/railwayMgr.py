@@ -311,16 +311,16 @@ class MapMgr(object):
 #-----------------------------------------------------------------------------
     def _initEnv(self):
         """ Init all the enviroment Items on the map such as IOT device or camera."""
-        envCfg = [ {'id':'Tuas Industry Area', 'img':'factory_0.png', 'pos':(80, 80), 'size':(120, 120)},
-                   {'id':'Changgi Airport', 'img':'airport.jpg', 'pos':(1500, 240), 'size':(160, 100)},
-                   {'id':'JurongEast-Jem', 'img':'city_0.png', 'pos':(360, 520), 'size':(80, 80)},
-                   {'id':'CityHall-01', 'img':'city_2.png', 'pos':(750, 520), 'size':(90, 80)},
-                   {'id':'CityHall-02', 'img':'city_1.png', 'pos':(850, 600), 'size':(80, 60)},
+        envCfg = [ {'id':'Pontybridd_Industry_Area', 'img':'factory_0.png', 'pos':(80, 80), 'size':(120, 120)},
+                   {'id':'Bristol_Airport', 'img':'airport.jpg', 'pos':(1500, 240), 'size':(160, 100)},
+                   {'id':'Radyr_Comprehensive_School', 'img':'city_0.png', 'pos':(360, 520), 'size':(80, 80)},
+                   {'id':'Cardiff_Central-01', 'img':'city_2.png', 'pos':(750, 520), 'size':(90, 80)},
+                   {'id':'Cardiff_Central-02', 'img':'city_1.png', 'pos':(850, 600), 'size':(80, 60)},
                    {'id':'Legend', 'img':'legend.png', 'pos':(1450, 820), 'size':(200, 150)},
-                   {'id':'Track-Sensor-Signal-PLCs', 'img': 'plcIcon2.png', 'pos':(250, 780), 'size':(60,50)},
-                   {'id':'Track-Station-PLCs', 'img': 'plcIcon2.png', 'pos':(250, 860), 'size':(60,50)},
-                   {'id':'Train-Ctrl-PLCs', 'img': 'plcIcon2.png', 'pos':(1100, 780), 'size':(60,50)},
-                   {'id':'Train-Ctrl-RTUs', 'img': 'rtuIcon2.png', 'pos':(1100, 860), 'size':(60,50)},
+                   {'id':'Track_Sensor_Signal_PLCs', 'img': 'plcIcon2.png', 'pos':(250, 780), 'size':(60,50)},
+                   {'id':'Track_Station_PLCs', 'img': 'plcIcon2.png', 'pos':(250, 860), 'size':(60,50)},
+                   {'id':'Train_Ctrl_PLCs', 'img': 'plcIcon2.png', 'pos':(1100, 780), 'size':(60,50)},
+                   {'id':'Train_Ctrl_RTUs', 'img': 'rtuIcon2.png', 'pos':(1100, 860), 'size':(60,50)},
                    {'id':'Date & Time', 'img': 'time.png', 'pos':(1270, 50), 'size':(30,30)}
                    ]
         for info in envCfg:
@@ -444,8 +444,8 @@ class MapMgr(object):
                     train.setEmgStop(stopflg)
         # change the trains avoidance config if need
         if trackID == 'config':
-            gv.gDebugPrint('--> change the CA state: %s' %str(powerStateList[0]), 
-                           logType=gv.LOG_INFO)
+            # gv.gDebugPrint('--> change the CA state: %s' %str(powerStateList[0]), 
+                        #    logType=gv.LOG_INFO)
             data = powerStateList[0]
             gv.gCollAvoid = data
             gv.iMainFrame.changeCAcheckboxState(gv.gCollAvoid)
@@ -501,6 +501,7 @@ class MapMgr(object):
                     result = train.checkCollFt(frontTrain)
                     # Handle the collision if the auto avoidance is disabled.
                     if result and (not gv.gCollAvoid):
+                        train.setFsensorVal(True)
                         train.setEmgStop(True)
                         train.setCollsionFlg(True)
                         frontTrain.setEmgStop(True)
@@ -511,7 +512,7 @@ class MapMgr(object):
                 if collsionTrainsDict and i in collsionTrainsDict[key]:
                     if not gv.gJuncAvoid: train.setEmgStop(True)
                 train.updateRealWordInfo()
-                train.updateTrainPos()               
+                train.updateTrainPos()        
             # update all the track's sensors state afte all the trains have moved.
             self.sensors[key].updateActive(val)
             # updaste all the signal, if test mode (not connect to PLC) call the 
